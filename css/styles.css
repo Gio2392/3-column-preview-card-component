@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+
+    --Very_light_gray: hsl(0, 0%, 95%);
+    --Transparent_white: hsla(0, 0%, 100%, 0.75);
+
+    --font_title: 'Big Shoulders Display', cursive;
+    --font_copy: 'Lexend Deca', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.5rem;
+    font-family: var(--font_copy);
+    background: var(--Very_light_gray);
+    position: relative;
+}
+
+.attribution { font-size: 11px; text-align: center; 
+position: absolute;
+bottom: 3rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.bg{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    
+}
+.cards_container{
+    width: 90rem;
+    margin: 10rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.card{
+    padding: 5rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.btn{
+    text-decoration: none;
+    background: var(--Very_light_gray);
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    align-self: flex-start;  
+    transition: all .3s ease;  
+}
+.card:nth-child(1){ background: var(--Bright_orange); }
+.card:nth-child(1) .btn{ color: var(--Bright_orange); }
+
+.card:nth-child(2){ background: var(--Dark_cyan); }
+.card:nth-child(2) .btn{ color: var(--Dark_cyan); }
+
+.card:nth-child(3){ background: var(--Very_dark_cyan); }
+.card:nth-child(3) .btn{ color: var(--Very_dark_cyan); }
+
+.card .btn:hover{
+    color: white;
+    background: transparent;
+    box-shadow: inset 0 0 0 2px var(--Very_light_gray);
+}
+.card_title{
+    font-family: var(--font_title);
+    text-transform: uppercase;
+    color: var(--Very_light_gray);
+    font-size: 3rem;
+    margin: 2.5rem 0;
+
+}
+.card_text{
+    color: var(--Transparent_white);
+    line-height: 2;
+    margin: 0;
+    padding-bottom: 8rem;
+}
